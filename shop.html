@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop the full Luxe Aura collection — premium handcrafted gold-plated necklaces, earrings, bracelets, rings, and jewellery sets." />
+  <title>Shop — Luxe Aura by Aini Zaidi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Luxe <span>Aura</span></a>
+<div class="nav-search search-wrapper" role="search" style="position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; background: rgba(253, 251, 247, 0.8); backdrop-filter: blur(8px); border: 1px solid #eae5da; border-radius: 30px; padding: 6px 16px; width: 320px; z-index: 999; transition: all 0.3s ease;">
+  <span class="search-icon" style="display: flex; align-items: center; color: #b3924e;">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </span>
+  <input
+    class="search-input"
+    type="search"
+    id="search-input"
+    placeholder="Search premium pieces..."
+    autocomplete="off"
+    style="border: none !important; background: transparent !important; outline: none !important; padding: 4px 10px !important; font-size: 0.9rem !important; color: #222 !important; width: 100%;"
+  />
+</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HERO ═══════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">The Full Collection</p>
+      <h1 class="section-title">Our Jewellery</h1>
+      <p>Every piece, every story — discover your signature adornment.</p>
+    </div>
+  </section>
+
+  <!-- ══ SHOP LAYOUT ═════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- ── Sidebar / Filter Bar ── -->
+        <aside class="shop-sidebar" aria-label="Filter products">
+          <p class="sidebar-title">Filter Collection</p>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Category</span>
+            <button class="filter-btn active" data-category="all">All Pieces</button>
+            <button class="filter-btn" data-category="necklaces">Necklaces</button>
+            <button class="filter-btn" data-category="earrings">Earrings</button>
+            <button class="filter-btn" data-category="bracelets">Bracelets</button>
+            <button class="filter-btn" data-category="rings">Rings</button>
+            <button class="filter-btn" data-category="sets">Sets</button>
+            <button class="filter-btn" data-category="watches">Watches</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Price Range</span>
+            <button class="filter-btn" data-price-min="0" data-price-max="2500">Under Rs. 2,500</button>
+            <button class="filter-btn" data-price-min="2500" data-price-max="5000">Rs. 2,500 – 5,000</button>
+            <button class="filter-btn" data-price-min="5000" data-price-max="99999">Above Rs. 5,000</button>
+          </div>
+        </aside>
+
+        <!-- ── Product Grid ── -->
+        <main>
+          <div class="product-grid" id="product-list-container">
+            <!-- Injected by shop.js -->
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <p class="footer-logo">Luxe Aura</p>
+      <p>by Aini Zaidi &nbsp;·&nbsp; Premium Plated Jewellery</p>
+      <p style="margin-top:.75rem;">
+        Questions? Reach us on
+        <a href="https://wa.me/923378057450" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </p>
+      <p style="margin-top:1.5rem; font-size:.75rem; opacity:.5;">
+        © 2024 Luxe Aura by Aini Zaidi. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

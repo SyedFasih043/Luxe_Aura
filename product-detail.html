@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — Luxe Aura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Luxury Styling Alignment Backup */
+        .detail-container-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .img-display-wrapper {
+            background: #fdfbf7;
+            border: 1px solid #eae5da;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+        .img-display-wrapper img {
+            max-width: 100%;
+            max-height: 550px;
+            object-fit: contain;
+        }
+        .meta-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .luxury-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .luxury-price {
+            font-size: 1.6rem;
+            color: #b3924e;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .spec-table-box {
+            border-top: 1px solid #eae5da;
+            border-bottom: 1px solid #eae5da;
+            padding: 20px 0;
+            margin-bottom: 25px;
+        }
+        .spec-row {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .spec-label {
+            width: 120px;
+            font-weight: bold;
+            color: #555;
+        }
+        .spec-val {
+            color: #777;
+        }
+        .luxury-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+        .order-btn {
+            background-color: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        }
+        .order-btn:hover {
+            background-color: #20ba5a;
+        }
+        .back-shopping-btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: #222;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            border: 1px solid #222;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        .back-shopping-btn:hover {
+            background: #222;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .detail-container-layout { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+  <header style="background: #fdfbf7; padding: 20px 0; border-bottom: 1px solid #eae5da; position: relative; z-index: 10000;">
+    <div style="max-width: 1250px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+        
+        <div class="logo-box" style="line-height: 1.2;">
+            <div style="font-family: var(--font-display, serif); font-size: 1.6rem; font-weight: 700; color: #222; letter-spacing: 2px;">LUXE</div>
+            <div style="font-family: var(--font-display, serif); font-size: 1.3rem; font-weight: 500; color: #b3924e; letter-spacing: 3px; margin-top: 2px;">AURA</div>
+        </div>
+
+        <nav>
+            <ul id="luxury-nav-links" style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+                <li><a href="index.html" style="text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #555;">Home</a></li>
+                <li><a href="shop.html" style="text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #b3924e;">Shop</a></li>
+                <li><a href="index.html#about" style="text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #555;">About</a></li>
+                <li><a href="index.html#contact" style="text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #555;">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="luxe-hamburger-trigger" style="display: none; flex-direction: column; gap: 6px; cursor: pointer; width: 26px; z-index: 10001;">
+            <span style="width: 100%; height: 2px; background: #222; transition: 0.3s;"></span>
+            <span style="width: 100%; height: 2px; background: #222; transition: 0.3s;"></span>
+            <span style="width: 100%; height: 2px; background: #222; transition: 0.3s;"></span>
+        </div>
+
+    </div>
+</header>
+
+<style>
+    @media (max-width: 768px) {
+        #luxe-hamburger-trigger {
+            display: flex !important; /* Only shows when viewport shrinks */
+        }
+        #luxury-nav-links {
+            display: flex !important;
+            flex-direction: column !important;
+            position: fixed !important;
+            top: 0 !important;
+            right: -100% !important; /* Hidden off-screen safely */
+            width: 260px !important;
+            height: 100vh !important;
+            background: #111111 !important; /* Black Gold Premium Theme Drawer */
+            padding: 100px 40px !important;
+            gap: 30px !important;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.2) !important;
+        }
+        #luxury-nav-links.drawer-active {
+            right: 0 !important; /* Animated slide into layout */
+        }
+        #luxury-nav-links a {
+            color: #fdfbf7 !important; /* Crisp contrast text inside drawer */
+            font-size: 1.1rem !important;
+            display: block !important;
+        }
+        #luxury-nav-links a:hover {
+            color: #b3924e !important;
+        }
+    }
+</style>
+
+    <div style="max-width: 1200px; margin: 30px auto 0; padding: 0 20px; font-size: 0.8rem; color: #999; letter-spacing: 1px;">
+        HOME &nbsp;>&nbsp; SHOP &nbsp;>&nbsp; PRODUCT
+    </div>
+
+    <main class="detail-container-layout">
+        
+        <div class="img-display-wrapper">
+            <img id="product-detail-img" src="" alt="Loading Premium Piece..." />
+        </div>
+
+        <div class="meta-content-wrapper">
+            <h1 id="product-detail-title" class="luxury-heading">Loading Premium Piece...</h1>
+            
+            <div id="product-detail-price" class="luxury-price">Rs. 0.00</div>
+
+            <div class="spec-table-box">
+                <div class="spec-row">
+                    <div class="spec-label">Material</div>
+                    <div class="spec-val">Premium Brass, 22K Gold Plated</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Finish</div>
+                    <div class="spec-val">Anti-tarnish, Hypoallergenic Coat</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Packaging</div>
+                    <div class="spec-val">Signature Luxe Aura Gift Box</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Delivery</div>
+                    <div class="spec-val">3 – 5 Business Days (Pakistan-wide)</div>
+                </div>
+            </div>
+
+            <p id="product-detail-desc" class="luxury-desc">
+                Fetching premium craftsmanship specifications from inventory registry...
+            </p>
+
+            <a id="whatsapp-order-btn" class="order-btn" href="#" style="display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #111; color: #fff; border: 1px solid #111; padding: 16px 20px; font-size: 0.9rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-sizing: border-box; margin-bottom: 12px;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    Order Via WhatsApp
+</a>
+
+<style>
+    #whatsapp-order-btn:hover {
+        background: #b3924e !important; /* Premium Luxury Gold Transition */
+        border-color: #b3924e !important;
+        box-shadow: 0 8px 20px rgba(179, 146, 78, 0.2);
+        transform: translateY(-2px);
+    }
+    #whatsapp-order-btn:hover stroke {
+        transform: scale(1.05);
+    }
+</style>
+
+            <a href="shop.html" class="back-shopping-btn">
+                ← CONTINUE SHOPPING
+            </a>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid #eae5da; padding: 40px 0; margin-top: 100px; text-align: center; background: #fafafa;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 10px;">
+                Questions? Reach out to our concierge portal via 
+                <a href="https://wa.me/923378057450" target="_blank" rel="noopener noreferrer" style="color: #b3924e; font-weight: bold; text-decoration: none;">WhatsApp</a>
+            </p>
+            <p style="font-size: 0.75rem; color: #999; letter-spacing: 1px;">
+                &copy; 2026 Luxe Aura by Aini Zaidi. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/shop.js"></script>
+
+</body>
+</html>
