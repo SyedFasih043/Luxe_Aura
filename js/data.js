@@ -56,7 +56,15 @@ const jewelryProducts = {
       category: "Rings",
       description: "Named after the French word for 'solemn', the Solène Pendant Ring brings quiet, dignified beauty to your hand. The open-band design adapts to a range of finger sizes."
     },
-    
+    {
+      id: 31,
+      name: "Solène Pendant Ring",
+      price: "Rs. 1,950",
+      priceValue: 1950,
+      image: "images/ring1.jpg",
+      category: "Rings",
+      description: "Named after the French word for 'solemn', the Solène Pendant Ring brings quiet, dignified beauty to your hand. The open-band design adapts to a range of finger sizes."
+    },
     {
       id: 32,
       name: "Solène Pendant Ring",
