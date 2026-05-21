@@ -137,8 +137,10 @@ function populateDetailPage(product) {
     const descText = document.getElementById("product-detail-desc");
 
     if (titleText) titleText.textContent = product.name;
-    if (priceText) priceText.textContent = product.price;
-    if (descText && product.description) descText.textContent = product.description;
+if (priceText) priceText.textContent = product.price;
+
+// textContent ko badal kar innerHTML kar diya taake bold tags active ho sakein
+if (descText && product.description) descText.innerHTML = product.description;
 
     // 3. FORCE WHATSAPP CLICK ENGINE (Bypasses any browser lock)
     const whatsappBtn = document.getElementById("whatsapp-order-btn");

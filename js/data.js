@@ -11,17 +11,17 @@ const jewelryProducts = {
       priceValue: 1150,
       image: "images/necklace1.png",
       category: "Necklaces",
-      description: "Designed for longevity and modern elegance, the necklace features a specialized anti-tarnish coat to preserve its brilliant shine, ensuring a skin-friendly, hypoallergenic wearing experience. Perfect for statement styling or gifting in our signature packaging."
+      description: "<strong>Description</strong>: Designed for longevity and modern elegance, the necklace features a specialized anti-tarnish coat to preserve its brilliant shine, ensuring a skin-friendly, hypoallergenic wearing experience. Perfect for statement styling or gifting in our signature packaging."
     },
     
     {
       id: 2,
-      name: "Aurelian Bloom Necklace",
-      price: "Rs. 4,500",
-      priceValue: 4500,
-      image: "images/necklace2.jpg",
+      name: "Adoria Braided Chevron Chain",
+      price: "Rs. 1,550.00",
+      priceValue: 1550,
+      image: "images/necklace2.jpeg",
       category: "Necklaces",
-      description: "A masterwork of 22K gold-plated artistry, the Aurelian Bloom Necklace captures the ephemeral beauty of a blossoming flower in exquisite detail. Each petal is individually hand-formed by our master craftsmen, then layered with a double-coat micron gold plating for unrivalled depth and luminosity."
+      description: "<strong>Description</strong>: Discover the art of fluid elegance with interwoven flat herringbone strands braided together to create a striking rich gold-tone statement piece."
     }
   ],
   earrings: [
