@@ -38,13 +38,12 @@ const jewelryProducts = {
   bracelets: [
     {
       id: 21,
-      name: "Regalia Cuff Bracelet",
-      price: "Rs. 5,200",
-      priceValue: 5200,
-      image: "images/bracelet1.jpg",
+      name: "The Lumina Grid Bracelet",
+      price: "Rs. 1,250",
+      priceValue: 1250,
+      image: "images/bracelet1.png",
       category: "Bracelets",
-      description: "The Regalia Cuff Bracelet is a bold declaration of refined taste. Sculpted in a single, seamless arc of premium brass, this architectural piece is then triple-plated in our signature warm gold tone."
-    }
+description: "<strong>Description</strong>: This piece features a striking track of brilliant-cut crystals locked securely between a dual border of tightly woven gold mesh. The geometric symmetry offers a clean, contemporary layout that frames the sparkling stones like architectural pillars, blending sharp elegance with structural strength."    }
   ],
   rings: [
     {
