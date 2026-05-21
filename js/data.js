@@ -6,12 +6,12 @@ const jewelryProducts = {
   necklaces: [
     {
       id: 1,
-      name: "Aurelian Bloom Necklace",
-      price: "Rs. 4,500",
-      priceValue: 4500,
-      image: "images/necklace1.jpg",
+      name: "Aurelian Teardrop Necklace",
+      price: "Rs. 1,150.00",
+      priceValue: 1150,
+      image: "images/necklace1.png",
       category: "Necklaces",
-      description: "A masterwork of 22K gold-plated artistry, the Aurelian Bloom Necklace captures the ephemeral beauty of a blossoming flower in exquisite detail. Each petal is individually hand-formed by our master craftsmen, then layered with a double-coat micron gold plating for unrivalled depth and luminosity."
+      description: "Designed for longevity and modern elegance, the necklace features a specialized anti-tarnish coat to preserve its brilliant shine, ensuring a skin-friendly, hypoallergenic wearing experience. Perfect for statement styling or gifting in our signature packaging."
     },
     
     {
