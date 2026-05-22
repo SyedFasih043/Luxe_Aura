@@ -93,6 +93,24 @@ description: "<strong>Description</strong>: This piece features a striking track
       description: "<strong>Description</strong>: This bracelet takes a timeless golden chain and weaves it into a rich, textured band. It feels lightweight on the skin but looks instantly luxurious—adding a warm, polished touch to your style."
     },
 
+    {
+      id: 24,
+      name: "Clover Bracelet",
+      price: "Rs. 1,100",
+      priceValue: 1100,
+      images: [
+    "images/bracelet4_1.png",
+    "images/bracelet4_2.jpeg",
+    
+
+],
+      category: "Bracelets",
+      description: "<strong>Description</strong>: Where luck meets ultimate luxury. The Clover bracelet features a finely engraved golden four-leaf clover centerpiece, flawlessly paired with brilliant geometric cut crystals that catch the light from every angle. A stunning talisman of prosperity and modern sophistication designed for the contemporary woman."
+    },
+
+
+
+
 
 
 
