@@ -120,55 +120,6 @@ function renderShopProducts(productsList, container) {
     container.innerHTML = productsList.map(p => createCardHTML(p)).join("");
 }
 
-// Asli Dynamic Data Router and FORCE WHATSAPP REDIRECT ENGINE
-function populateDetailPage(product) {
-    console.log("Loading data for dynamic piece:", product.name);
-    
-    // 1. Image Element Dynamic Injector
-    const mainImg = document.getElementById("product-detail-img");
-    if (mainImg) {
-        mainImg.src = product.image;
-        mainImg.alt = product.name;
-    }
-
-    // 2. Texts Elements Dynamic Injectors
-    const titleText = document.getElementById("product-detail-title");
-    const priceText = document.getElementById("product-detail-price");
-    const descText = document.getElementById("product-detail-desc");
-
-    if (titleText) titleText.textContent = product.name;
-if (priceText) priceText.textContent = product.price;
-
-// textContent ko badal kar innerHTML kar diya taake bold tags active ho sakein
-if (descText && product.description) descText.innerHTML = product.description;
-
-    // 3. FORCE WHATSAPP CLICK ENGINE (Bypasses any browser lock)
-    const whatsappBtn = document.getElementById("whatsapp-order-btn");
-    if (whatsappBtn) {
-        
-        // Click event ko shuru se rewrite karte hain
-        whatsappBtn.onclick = function(e) {
-            e.preventDefault(); // Kisi bhi purane link restriction ko roko
-            
-            const phoneNumber = "923378057450"; 
-            const currentProductUrl = window.location.href;
-            
-            // Aapka customized prompt content
-            const textTemplate = `Salam Luxe Aura,\n\nI would like to place an order for this premium piece:\n\n✨ *Product:* ${product.name}\n💰 *Price:* ${product.price}\n🔗 *Page Link:* ${currentProductUrl}\n\nPlease confirm the availability status. Thanks!`;
-            const encodedMessage = encodeURIComponent(textTemplate);
-            
-            const finalWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            console.log("Force launching WhatsApp window...");
-            // Forcefully new tab mein open karega bina fail hue
-            window.open(finalWhatsappUrl, '_blank', 'noopener,noreferrer');
-        };
-        
-    } else {
-        console.error("HTML Error: id='whatsapp-order-btn' element missing from template structure.");
-    }
-}
-
 // ==========================================================================
 // UNIVERSAL SMART HAMBURGER CONTROLLER (FOR ALL PAGES)
 // ==========================================================================
@@ -363,3 +314,132 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Asli Dynamic Data Router and FORCE WHATSAPP REDIRECT ENGINE
+function populateDetailPage(product) {
+    console.log("Loading data for dynamic piece:", product.name);
+    
+    // 1. Image Element Dynamic Injector Detector
+    const mainImg = document.getElementById("product-detail-img");
+    
+    // 2. Texts Elements Dynamic Injectors
+    const titleText = document.getElementById("product-detail-title");
+    const priceText = document.getElementById("product-detail-price");
+    const descText = document.getElementById("product-detail-desc");
+
+    if (titleText) titleText.textContent = product.name;
+    if (priceText) priceText.textContent = product.price;
+
+    // textContent ko badal kar innerHTML kar diya taake bold tags active ho sakein
+    if (descText && product.description) descText.innerHTML = product.description;
+
+    // ----------------------------------------------------------------------
+    // 🎯 DYNAMIC IMAGES SLIDER LOGIC INSIDE SCOPE (FIXED!)
+    // ----------------------------------------------------------------------
+    let currentImageIndex = 0;
+    let productImages = [];
+
+    const prevBtn = document.getElementById("prev-img-btn");
+    const nextBtn = document.getElementById("next-img-btn");
+
+    // Images Array Data Extraction (Donon patterns safe handle karega)
+    if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+        productImages = product.images.filter(img => img && img.trim() !== ""); 
+    } else if (product.image && product.image.trim() !== "") {
+        productImages = [product.image];
+    }
+
+    // Pehli image load karwyein
+    if (mainImg && productImages.length > 0) {
+        mainImg.src = productImages[0];
+        mainImg.alt = product.name;
+    }
+
+    // 🎯 SHOW ONLY IF MULTIPLE IMAGES EXIST
+    if (productImages.length > 1) {
+        if (prevBtn) {
+            prevBtn.style.setProperty("display", "flex", "important");
+            prevBtn.style.visibility = "visible";
+        }
+        if (nextBtn) {
+            nextBtn.style.setProperty("display", "flex", "important");
+            nextBtn.style.visibility = "visible";
+        }
+    } else {
+        // Single image par confirm double-lock hidden
+        if (prevBtn) prevBtn.style.setProperty("display", "none", "important");
+        if (nextBtn) nextBtn.style.setProperty("display", "none", "important");
+    }
+
+    // Click Logic (Sirf multiple images par chalega)
+    if (nextBtn && productImages.length > 1) {
+        nextBtn.onclick = function() {
+            currentImageIndex++;
+            if (currentImageIndex >= productImages.length) currentImageIndex = 0;
+            if (mainImg) mainImg.src = productImages[currentImageIndex];
+        };
+    }
+
+    if (prevBtn && productImages.length > 1) {
+        prevBtn.onclick = function() {
+            currentImageIndex--;
+            if (currentImageIndex < 0) currentImageIndex = productImages.length - 1;
+            if (mainImg) mainImg.src = productImages[currentImageIndex];
+        };
+    }
+    // ----------------------------------------------------------------------
+
+    // 3. FORCE WHATSAPP CLICK ENGINE (Bypasses any browser lock)
+    const whatsappBtn = document.getElementById("whatsapp-order-btn");
+    if (whatsappBtn) {
+        
+        // Click event ko shuru se rewrite karte hain
+        whatsappBtn.onclick = function(e) {
+            e.preventDefault(); // Kisi bhi purane link restriction ko roko
+            
+            const phoneNumber = "923378057450"; 
+            const currentProductUrl = window.location.href;
+            
+            // Aapka customized prompt content
+            const textTemplate = `Salam Luxe Aura,\n\nI would like to place an order for this premium piece:\n\n✨ *Product:* ${product.name}\n💰 *Price:* ${product.price}\n🔗 *Page Link:* ${currentProductUrl}\n\nPlease confirm the availability status. Thanks!`;
+            const encodedMessage = encodeURIComponent(textTemplate);
+            
+            const finalWhatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            console.log("Force launching WhatsApp window...");
+            // Forcefully new tab mein open karega bina fail hue
+            window.open(finalWhatsappUrl, '_blank', 'noopener,noreferrer');
+        };
+        
+    } else {
+        console.error("HTML Error: id='whatsapp-order-btn' element missing from template structure.");
+    }
+}
+
+
+function createCardHTML(product) {
+    // Check karega agar images ka array hai toh pehli image uthaye, warna single image fallback kare
+    const displayImage = (product.images && Array.isArray(product.images) && product.images.length > 0) 
+        ? product.images[0] 
+        : product.image;
+
+    return `
+        <div class="product-card" onclick="window.location.href='product-detail.html?id=${product.id}'" style="cursor: pointer;">
+            <div class="product-image-container">
+                <img src="${displayImage}" alt="${product.name}" loading="lazy" />
+                <div class="product-overlay">
+                    <span class="action-btn" title="View Details">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="product-meta">
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-price">${product.price}</p>
+                <span class="discover-link" style="color: #b3924e; font-size: 0.85rem; font-weight: bold; margin-top: 10px; display: inline-block;">
+                    Order Now
+                </span>
+            </div>
+        </div>
+    `;
+}
