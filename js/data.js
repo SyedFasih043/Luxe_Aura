@@ -30,6 +30,11 @@ const jewelryProducts = {
       description: "<strong>Description</strong>: Discover the art of fluid elegance with interwoven flat herringbone strands braided together to create a striking rich gold-tone statement piece."
     }
   ],
+ 
+ 
+ 
+ 
+ 
   earrings: [
     {
       id: 11,
@@ -41,6 +46,11 @@ const jewelryProducts = {
       description: "<strong>Description</strong>: Inspired by the gentle cascade of starlight, the Celestia Drop Earrings are a symphony of light and form. Suspended from a fine gold-plated arc, each teardrop is hand-polished to a mirror finish and adorned with a single freshwater pearl accent."
     }
   ],
+  
+  
+  
+  
+  
   bracelets: [
     {
       id: 21,
@@ -104,16 +114,27 @@ description: "<strong>Description</strong>: This piece features a striking track
       description: "<strong>Description</strong>: A bold interplay of form and shine. This waterproof ring features a sculptural cluster of radiant gold spheres and luminous pearls, creating a dimensional statement that's both playful and opulent. Designed to stand out with every flick of the hand."
     },
     
+   
     {
       id: 32,
-      name: "Solène Pendant Ring",
-      price: "Rs. 1,950",
-      priceValue: 1950,
-      image: "images/ring2.jpg",
+      name: "Monarch Ring",
+      price: "Rs. 800",
+      priceValue: 800,
+      images: [
+    "images/ring2_1.png",
+    "images/ring2_2.png",
+    "images/ring2_3.png"
+
+],
       category: "Rings",
-      description: "<strong>Description</strong>: Named after the French word for 'solemn', the Solène Pendant Ring brings quiet, dignified beauty to your hand. The open-band design adapts to a range of finger sizes."
+      description: "<strong>Description</strong>: A tribute to royal heritage and natural splendor. Monarch Ring captures the majestic silhouette of a butterfly in a flawless, radiant golden expanse. Featuring fine, haute-joaillerie texturing that catches the light with every movement, this statement ring is crafted for the connoisseur of rare, sculptural luxury."
     }
   ],
+ 
+ 
+ 
+ 
+ 
   sets: [
     {
       id: 41,
@@ -127,7 +148,11 @@ description: "<strong>Description</strong>: This piece features a striking track
   ],
 
 
-watches: [
+
+
+
+
+  watches: [
     {
       id: 51,
       name: "Chronograph Gold Edition",
