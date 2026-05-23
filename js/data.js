@@ -19,7 +19,7 @@ const jewelryProducts = {
     
     {
       id: 2,
-      name: "Adoria Braided Chevron Chain",
+      name: "Adoria Braided Chevron Necklace",
       price: "Rs. 1,550.00",
       priceValue: 1550,
       images: [
@@ -95,7 +95,7 @@ const jewelryProducts = {
     {
       id: 21,
       name: "The Lumina Grid Bracelet",
-      price: "Rs. 1,250",
+      price: "Rs. 1,250.00",
       priceValue: 1250,
       images: [
     "images/bracelet1_1.png",
@@ -107,7 +107,7 @@ description: "<strong>Description</strong>: This piece features a striking track
 {
       id: 22,
       name: "Mystic Tree Zircon Bracelet",
-      price: "Rs. 1,250",
+      price: "Rs. 1,250.00",
       priceValue: 1250,
       images: [
     "images/bracelet2_1.jpeg",
@@ -136,8 +136,8 @@ description: "<strong>Description</strong>: This piece features a striking track
     {
       id: 24,
       name: "Clover Bracelet",
-      price: "Rs. 1,100",
-      priceValue: 1100,
+      price: "Rs. 1,400.00",
+      priceValue: 1400,
       images: [
     "images/bracelet4_1.png",
     "images/bracelet4_2.jpeg",
@@ -163,7 +163,7 @@ description: "<strong>Description</strong>: This piece features a striking track
     {
       id: 31,
       name: "Pearl Bubble Ring",
-      price: "Rs. 1,200",
+      price: "Rs. 1,200.00",
       priceValue: 1200,
       images: [
     "images/ring1_1.png",
@@ -178,7 +178,7 @@ description: "<strong>Description</strong>: This piece features a striking track
     {
       id: 32,
       name: "Monarch Ring",
-      price: "Rs. 800",
+      price: "Rs. 800.00",
       priceValue: 800,
       images: [
     "images/ring2_1.png",
@@ -226,7 +226,7 @@ description: "<strong>Description</strong>: This piece features a striking track
     {
       id: 41,
       name: "Lumière Layered Set",
-      price: "Rs. 7,800",
+      price: "Rs. 7,800.00",
       priceValue: 7800,
       image: "images/set1.jpg",
       category: "Sets",
@@ -245,7 +245,7 @@ description: "<strong>Description</strong>: This piece features a striking track
     {
       id: 51,
       name: "Chronograph Gold Edition",
-      price: "Rs. 7,000",
+      price: "Rs. 7,000.00",
       priceValue: 7000,
       image: "images/watch1.jpg", 
       category: "Watches",
