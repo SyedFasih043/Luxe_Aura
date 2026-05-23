@@ -32,23 +32,63 @@ const jewelryProducts = {
   ],
  
  
- 
+ // ----------------------------------------------------------------------
+  // EARRINGS
+  // ---------------------------------------------------------------------
  
  
   earrings: [
     {
       id: 11,
-      name: "Celestia Drop Earrings",
-      price: "Rs. 2,800",
-      priceValue: 2800,
-      image: "images/earrings1.jpg",
+      name: "Heart Drop Earrings ",
+      price: "Rs. 850.00",
+      priceValue: 850,
+       images: [
+    "images/earrings1_1.jpg",
+    "images/earrings1_2.jpg",
+    "images/earrings1_3.jpg",
+
+],
       category: "Earrings",
-      description: "<strong>Description</strong>: Inspired by the gentle cascade of starlight, the Celestia Drop Earrings are a symphony of light and form. Suspended from a fine gold-plated arc, each teardrop is hand-polished to a mirror finish and adorned with a single freshwater pearl accent."
-    }
+      description: "<strong>Description</strong>: These elegant earrings feature a unique two-part design. A sparkling square-cut zircon sits at the lobe, holding a beautiful hollow puffed heart that drapes below. They blend a modern geometric look with a classic romantic symbol, making them versatile enough for both day and night."
+    },
+    {
+      id: 12,
+      name: "Heart Stud Earrings",
+      price: "Rs. 650.00",
+      priceValue: 650,
+       images: [
+    "images/earrings2_1.png",
+    "images/earrings2_2.png",
+    "images/earrings2_3.png",
+
+],
+      category: "Earrings",
+      description: "<strong>Description</strong>: These Gold Puffy Heart Stud Earrings make a thoughtful and enduring gift for birthdays, anniversaries, Valentine's Day, or just because. They are truly the definition of versatile, timeless, and high-quality jewelry."
+    },
+
+     {
+      id: 13,
+      name: "Gold Ribbon Bow Earrings",
+      price: "Rs. 650.00",
+      priceValue: 650,
+       images: [
+    "images/earrings3_1.png",
+    "images/earrings3_2.jpg",
+    "images/earrings3_3.png",
+
+],
+      category: "Earrings",
+      description: "<strong>Description</strong>: These bow stud earrings are the perfect way to add a playful, feminine touch to your look. Whether you're dressing up for a special occasion or adding a little charm to your everyday style, these sweet bows bring a subtle yet elegant flair. Made from stainless steel, these studs are made for all-day wear."
+    },
+
+    
   ],
   
   
-  
+  // ----------------------------------------------------------------------
+  // Bracelets
+  // ---------------------------------------------------------------------
   
   
   bracelets: [
@@ -111,7 +151,9 @@ description: "<strong>Description</strong>: This piece features a striking track
 
 
 
-
+// ----------------------------------------------------------------------
+// RINGS
+// ----------------------------------------------------------------------
 
 
 
@@ -146,11 +188,38 @@ description: "<strong>Description</strong>: This piece features a striking track
 ],
       category: "Rings",
       description: "<strong>Description</strong>: A tribute to royal heritage and natural splendor. Monarch Ring captures the majestic silhouette of a butterfly in a flawless, radiant golden expanse. Featuring fine, haute-joaillerie texturing that catches the light with every movement, this statement ring is crafted for the connoisseur of rare, sculptural luxury."
+    },
+
+
+{
+      id: 33,
+      name: "Golden Matrix Ring",
+      price: "Rs. 550.00",
+      priceValue: 550,
+      images: [
+    "images/ring3_1.png",
+    "images/ring3_2.png",
+    "images/ring3_3.png"
+
+],
+      category: "Rings",
+      description: "<strong>Description</strong>: Our Mesh Elegance Band perfectly blends modern sophistication with everyday luxury. This wide statement ring features a striking geometric cutout design that effortlessly catches the light, adding a sleek, textured edge to any look. With its premium high-polish gold finish, it is the ultimate versatile piece to elevate your style from day to night. Sleek, bold, and modern."
     }
+
+
+
+
   ],
  
  
  
+
+// ----------------------------------------------------------------------
+// sets
+// ---------------------------------------------------------------------
+
+
+
  
  
   sets: [
@@ -167,7 +236,9 @@ description: "<strong>Description</strong>: This piece features a striking track
 
 
 
-
+// ----------------------------------------------------------------------
+// WATCHES
+// ---------------------------------------------------------------------
 
 
   watches: [
