@@ -199,7 +199,7 @@ description: "<strong>Description</strong>: This piece features a striking track
       images: [
     "images/ring3_1.png",
     "images/ring3_2.png",
-    "images/ring3_3.png"
+    "images/ring3_3.jpg"
 
 ],
       category: "Rings",
